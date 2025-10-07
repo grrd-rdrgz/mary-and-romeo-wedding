@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Wedding of Jane & Alex</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Load Inter font (Body) and a decorative font for headers -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+		
+        /* Custom Tailwind Configuration */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-accent': '#a2826e', /* Soft Rose */
+                        'bg-soft': '#fcfcfc',
+                        'text-dark': '#333333',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Cormorant Garamond', 'serif'], /* Elegant Serif for titles */
+                    }
+                }
+            }
+        }
+        /* Custom Scroll and Base Styles */
+        body {
+            background-color: #fcfcfc;
+            color: #333333;
+            scroll-behavior: smooth;
+        }
+        /* Style for a subtle border element */
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #a2626e, transparent);
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="min-h-screen font-sans">
+
+        <!-- Navigation/Header (Fixed for accessibility) -->
+        <nav class="sticky top-0 z-10 w-full bg-bg-soft/95 backdrop-blur-sm shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+                <a href="#" class="text-xl font-serif font-bold text-primary-accent tracking-widest">J & A</a>
+                <div class="space-x-4 text-sm hidden sm:flex">
+                    <a href="#details" class="text-text-dark hover:text-primary-accent transition duration-200">Details</a>
+                    <a href="#story" class="text-text-dark hover:text-primary-accent transition duration-200">Our Story</a>
+                    <a href="#rsvp" class="text-text-dark hover:text-primary-accent transition duration-200">RSVP</a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- 1. HERO SECTION -->
+        <header id="home" class="relative flex items-center justify-center min-h-[80vh] bg-cover bg-center" 
+                style="background-image: url('https://placehold.co/1200x800/fcfcfc/a2626e?text=Elegant+Floral+Placeholder');">
+            
+            <!-- Dark Overlay for Text Readability -->
+            <div class="absolute inset-0 bg-black/10"></div>
+            
+            <div class="z-0 text-center p-6 md:p-12 max-w-4xl mx-auto">
+                <p class="text-lg text-white mb-2 font-serif tracking-widest uppercase">You are invited to the Wedding of</p>
+                <h1 class="text-6xl md:text-8xl font-serif font-light text-white leading-tight">
+                    Mary <span class="text-primary-accent">&</span> Romeo
+                </h1>
+                <p class="text-xl md:text-3xl text-white mt-4 font-serif font-medium">
+                    October 12, 2026
+                </p>
+                <a href="#rsvp" class="mt-8 inline-block px-8 py-3 bg-primary-accent text-white
+					font-semibold rounded-full shadow-lg hover:primary-accent transition
+					duration-300 transform hover:scale-105">
+                    Confirm Your Attendance
+                </a>
+            </div>
+        </header>
+
+        <!-- 2. INVITATION DETAILS SECTION -->
+        <section id="details" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-center bg-bg-soft">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl font-serif font-bold text-primary-accent mb-4">The Details</h2>
+                <p class="text-lg text-text-dark mb-12 max-w-2xl mx-auto">
+                    We can't wait to share our special day with all of you. Here is the schedule for the ceremony and reception.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-8 text-left">
+                    <!-- Ceremony Card -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:shadow-xl">
+                        <p class="text-sm uppercase tracking-widest text-primary-accent font-semibold mb-2">Ceremony</p>
+                        <h3 class="text-3xl font-serif font-bold text-text-dark mb-4">The Exchange of Vows</h3>
+                        
+                        <p class="mb-2 flex items-center text-lg">
+                            <svg class="w-5 h-5 mr-3 text-primary-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="font-semibold">4:00 PM</span>
+                        </p>
+                        <p class="mb-2 flex items-center text-lg">
+                            <svg class="w-5 h-5 mr-3 text-primary-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            The Grand Manor Gardens
+                        </p>
+                        <p class="text-gray-500 text-sm mt-4">Formal attire requested.</p>
+                    </div>
+
+                    <!-- Reception Card -->
+                    <div class="bg-white p-8 rounded-xl shadow-lg border border-gray-100 transform transition duration-300 hover:shadow-xl">
+                        <p class="text-sm uppercase tracking-widest text-primary-accent font-semibold mb-2">Reception</p>
+                        <h3 class="text-3xl font-serif font-bold text-text-dark mb-4">Dinner, Drinks & Dancing</h3>
+
+                        <p class="mb-2 flex items-center text-lg">
+                            <svg class="w-5 h-5 mr-3 text-primary-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span class="font-semibold">6:30 PM</span>
+                        </p>
+                        <p class="mb-2 flex items-center text-lg">
+                            <svg class="w-5 h-5 mr-3 text-primary-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            The Grand Manor Ballroom
+                        </p>
+                        <p class="text-gray-500 text-sm mt-4">Evening casual attire.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        
+        <div class="divider max-w-5xl mx-auto"></div>
+
+        <!-- 3. OUR STORY SECTION -->
+        <section id="story" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-center bg-bg-soft">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-4xl font-serif font-bold text-primary-accent mb-12">Our Journey</h2>
+
+                <div class="md:flex md:space-x-12 items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0">
+                        <img src="https://placehold.co/600x400/a2626e/fcfcfc?text=Our+Story+Image" alt="Couple's photo placeholder" class="w-full h-auto object-cover rounded-xl shadow-2xl border-4 border-white">
+                    </div>
+                    <div class="md:w-1/2 text-left">
+                        <h3 class="text-2xl font-serif font-semibold text-text-dark mb-4">How We Met</h3>
+                        <p class="mb-4 text-gray-700 leading-relaxed">
+                            It all started on a rainy Tuesday in a small coffee shop downtown. Jane was sketching and Alex, armed with a bad joke about the weather, found the courage to strike up a conversation. Fast forward five years, countless adventures, and two adopted cats later, we're ready for the next chapter.
+                        </p>
+                        <p class="text-gray-700 leading-relaxed">
+                            Our love is built on laughter, shared dreams, and an endless supply of good coffee. We are so excited to formalize our bond and celebrate the commitment we've already made to each other, surrounded by the people we love most.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="divider max-w-5xl mx-auto"></div>
+
+        <!-- 4. RSVP SECTION -->
+        <section id="rsvp" class="py-16 md:py-24 px-4 sm:px-6 lg:px-8 text-center bg-bg-soft">
+            <div class="max-w-xl mx-auto bg-white p-8 md:p-12 rounded-xl shadow-2xl border border-primary-accent/30">
+                <h2 class="text-4xl font-serif font-bold text-primary-accent mb-4">RSVP</h2>
+                <p class="text-lg text-gray-600 mb-8">
+                    Please kindly respond by September 15th, 2026.
+                </p>
+
+                <form id="rsvpForm" onsubmit="handleRsvp(event)">
+                    <div class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-left text-sm font-medium text-gray-700 mb-1">Full Name(s)</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-accent focus:border-primary-accent transition duration-150" placeholder="John & Mary Smith">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-left text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-accent focus:border-primary-accent transition duration-150" placeholder="your.email@example.com">
+                        </div>
+                        <div>
+                            <label for="attending" class="block text-left text-sm font-medium text-gray-700 mb-1">Will you be attending?</label>
+                            <select id="attending" name="attending" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-accent focus:border-primary-accent transition duration-150">
+                                <option value="" disabled selected>Select an option</option>
+                                <option value="yes">Joyfully Accepts (Attending)</option>
+                                <option value="no">Regretfully Declines (Not Attending)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="guests" class="block text-left text-sm font-medium text-gray-700 mb-1">Number in Party (including yourself)</label>
+                            <input type="number" id="guests" name="guests" min="1" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-accent focus:border-primary-accent transition duration-150" value="1">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-left text-sm font-medium text-gray-700 mb-1">A Note for the Couple (Optional)</label>
+                            <textarea id="message" name="message" rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-primary-accent focus:border-primary-accent transition duration-150" placeholder="Any dietary restrictions or well wishes?"></textarea>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="mt-8 w-full px-6 py-3 bg-primary-accent text-white font-semibold rounded-lg shadow-xl hover:bg-primary-accent/90 transition duration-300 transform hover:scale-[1.01]">
+                        Send RSVP
+                    </button>
+                    
+                    <div id="rsvpMessage" class="mt-4 text-green-600 font-medium hidden"></div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-primary-accent py-12 px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <p class="text-white text-3xl font-serif mb-4">Jane & Alex</p>
+                <p class="text-white/80 text-xl font-medium mb-2">#FinallyJandA</p>
+                <p class="text-white/70 text-sm">We can't wait to celebrate with you!</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Mock function to handle the form submission
+        function handleRsvp(event) {
+            event.preventDefault(); // Prevent default form submission
+            
+            const form = document.getElementById('rsvpForm');
+            const messageBox = document.getElementById('rsvpMessage');
+            
+            const name = document.getElementById('name').value;
+            const attending = document.getElementById('attending').value;
+
+            // Simple validation and message display
+            if (attending === 'yes') {
+                messageBox.textContent = `Thank you, ${name}! Your attendance is confirmed. We look forward to seeing you!`;
+                messageBox.classList.remove('hidden', 'text-red-500');
+                messageBox.classList.add('text-green-600');
+                form.reset();
+            } else if (attending === 'no') {
+                messageBox.textContent = `We are sorry to hear that, ${name}. Thank you for letting us know.`;
+                messageBox.classList.remove('hidden', 'text-green-600');
+                messageBox.classList.add('text-red-500');
+                form.reset();
+            } else {
+                 messageBox.textContent = `Please select an option for attendance.`;
+                 messageBox.classList.remove('hidden', 'text-green-600');
+                 messageBox.classList.add('text-red-500');
+            }
+        }
+        
+        // This function would be used to copy a URL or hashtag if needed
+        function copyText(text) {
+            const tempInput = document.createElement('textarea');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            
+            try {
+                // Use execCommand for broader compatibility in sandboxed environments
+                document.execCommand('copy'); 
+                // Display a success message (replace console.log with a visible toast/modal in a real app)
+                console.log(`Copied: ${text}`);
+            } catch (err) {
+                console.error('Could not copy text: ', err);
+            }
+            document.body.removeChild(tempInput);
+        }
+
+        // Example: Add a click listener to copy the hashtag if it were a button
+        // document.querySelector('.hashtag-copy').addEventListener('click', () => {
+        //     copyText('#FinallyJandA');
+        // });
+    </script>
+</body>
+</html>
