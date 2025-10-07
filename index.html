@@ -15,7 +15,7 @@
             theme: {
                 extend: {
                     colors: {
-                        'primary-accent': '#a2826e', /* Soft Rose */
+                        'primary-accent': '#ff0000', /* Soft Rose */
                         'bg-soft': '#fcfcfc',
                         'text-dark': '#333333',
                     },
@@ -35,7 +35,7 @@
         /* Style for a subtle border element */
         .divider {
             height: 1px;
-            background: linear-gradient(to right, transparent, #a2626e, transparent);
+            background: linear-gradient(to right, transparent, #ff0000, transparent);
             margin: 2rem 0;
         }
     </style>
@@ -47,7 +47,7 @@
         <!-- Navigation/Header (Fixed for accessibility) -->
         <nav class="sticky top-0 z-10 w-full bg-bg-soft/95 backdrop-blur-sm shadow-sm">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
-                <a href="#" class="text-xl font-serif font-bold text-primary-accent tracking-widest">J & A</a>
+                <a href="#" class="text-xl font-serif font-bold text-primary-accent tracking-widest">M & R</a>
                 <div class="space-x-4 text-sm hidden sm:flex">
                     <a href="#details" class="text-text-dark hover:text-primary-accent transition duration-200">Details</a>
                     <a href="#story" class="text-text-dark hover:text-primary-accent transition duration-200">Our Story</a>
@@ -57,23 +57,22 @@
         </nav>
 
         <!-- 1. HERO SECTION -->
-        <header id="home" class="relative flex items-center justify-center min-h-[80vh] bg-cover bg-center" 
-                style="background-image: url('https://placehold.co/1200x800/fcfcfc/a2626e?text=Elegant+Floral+Placeholder');">
+        <header id="home" class="relative flex items-center justify-center min-h-[80vh] bg-cover bg-center"">
             
             <!-- Dark Overlay for Text Readability -->
             <div class="absolute inset-0 bg-black/10"></div>
             
             <div class="z-0 text-center p-6 md:p-12 max-w-4xl mx-auto">
-                <p class="text-lg text-white mb-2 font-serif tracking-widest uppercase">You are invited to the Wedding of</p>
-                <h1 class="text-6xl md:text-8xl font-serif font-light text-white leading-tight">
-                    Mary <span class="text-primary-accent">&</span> Romeo
+                <p class="text-lg mb-2 font-serif tracking-widest uppercase">You are invited to the Wedding of</p>
+                <h1 style="color:#aa2222;" class="text-6xl md:text-8xl font-serif font-light leading-tight">
+                    Mary <span >&</span> Romeo
                 </h1>
-                <p class="text-xl md:text-3xl text-white mt-4 font-serif font-medium">
+                <p class="text-xl md:text-3xl mt-4 font-serif font-medium">
                     October 12, 2026
                 </p>
-                <a href="#rsvp" class="mt-8 inline-block px-8 py-3 bg-primary-accent text-white
+                <a href="#rsvp" style="background:#aa2222;" class="mt-8 inline-block px-8 py-3 bg-primary-accent
 					font-semibold rounded-full shadow-lg hover:primary-accent transition
-					duration-300 transform hover:scale-105">
+					text-white duration-300 transform hover:scale-105">
                     Confirm Your Attendance
                 </a>
             </div>
@@ -261,4 +260,3 @@
     </script>
 </body>
 </html>
-
